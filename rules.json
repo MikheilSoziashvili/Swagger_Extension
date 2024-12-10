@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Host",
+          "operation": "set",
+          "value": "kyc-api.singular.api"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "http://internal-shared-alb-1130894093.eu-west-1.elb.amazonaws.com/swagger/index.html",
+      "resourceTypes": ["main_frame", "xmlhttprequest"]
+    }
+  }
+]

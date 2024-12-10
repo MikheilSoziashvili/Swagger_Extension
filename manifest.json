@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Dynamic Host Header Injector",
+    "version": "1.0",
+    "permissions": ["declarativeNetRequest", "declarativeNetRequestWithHostAccess", "storage"],
+    "host_permissions": [
+      "http://internal-shared-alb-1130894093.eu-west-1.elb.amazonaws.com/swagger/index.html"
+    ],
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "ruleset",
+          "enabled": true,
+          "path": "rules.json"
+        }
+      ]
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    }
+  }
+  
